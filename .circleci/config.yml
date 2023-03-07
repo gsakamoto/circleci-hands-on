@@ -32,6 +32,10 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+          filters:
+            brancjes:
+              only:
+                - master
       - unittest:
           requires:
             - say-hello
